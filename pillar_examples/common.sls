@@ -51,6 +51,13 @@ repos:
           - main
         keyurl: http://packages.elasticsearch.org/GPG-KEY-elasticsearch
 
+      elasticsearch:
+        url: http://packages.elasticsearch.org/elasticsearch/1.4/debian
+        dist: stable
+        comps:
+          - main
+        keyurl: http://packages.elasticsearch.org/GPG-KEY-elasticsearch
+
 elasticsearch:
   lookup:
     defaults:
