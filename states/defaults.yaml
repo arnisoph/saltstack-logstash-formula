@@ -1,0 +1,17 @@
+kernel:
+  Linux:
+    pkgs:
+      - logstash
+    service: {}
+os_family:
+  Debian:
+    config:
+      manage:
+        - defaults_file
+      defaults_file:
+        path: /etc/default/logstash
+  RedHat:
+    config:
+      manage: []
+      defaults_file:
+        path: /etc/sysconfig/logstash
