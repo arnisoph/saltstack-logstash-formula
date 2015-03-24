@@ -2,6 +2,8 @@ kernel:
   Linux:
     pkgs:
       - logstash
+    basepath: /opt/logstash
+    defaults: {}
     service: {}
 os_family:
   Debian:
@@ -15,3 +17,6 @@ os_family:
       manage: []
       defaults_file:
         path: /etc/sysconfig/logstash
+  default:
+    config:
+      manage: []

@@ -31,6 +31,10 @@ see how this can be achieved.
 Take a look at older `releases <https://github.com/bechtoldt/saltstack-logstash-formula/releases>`_ to get a version that isn't using the formhelper
 yet (if any).
 
+**NOTICE:** Plugin management doesn't work when using Logtash with upstream's Debian package. They set a custom version in
+`lib/logstash/version.rb <https://github.com/elastic/logstash/blob/master/lib/logstash/version.rb>`_ that makes the plugin tool unable to download
+the contrib plugin. Custom plugin management is not supported yet.
+
 
 Compatibility
 -------------
@@ -69,6 +73,7 @@ TODO
 * add tests
 * support tarball-based deployment (that won't insteall distro's java)
 * create a serializer that supports deserializing yaml/json => logstash config
+* extend logstash access permissions so the logstash is able to read root/adm-chgrp'ed files like /var/log/syslog
 
 
 Additional Resources
