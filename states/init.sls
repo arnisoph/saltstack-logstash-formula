@@ -35,7 +35,7 @@ logstash_defaults_file:
   {% set f = datamap['config'][c]|default({}) %}
 logstash_config_{{ c }}:
   file:
-    - managed
+    - {{ c.ensure|default('managed') }}
     - name: {{ f.path|default('/etc/logstash/conf.d/' ~ c ~ '.conf') }}
     {# - source: { { f.template_path|default('salt://logstash/files/main') } #}
     - mode: {{ f.mode|default(644) }}

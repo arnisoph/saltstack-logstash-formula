@@ -74,6 +74,7 @@ TODO
 * support tarball-based deployment (that won't insteall distro's java)
 * create a serializer that supports deserializing yaml/json => logstash config
 * extend logstash access permissions so the logstash is able to read root/adm-chgrp'ed files like /var/log/syslog
+* logstash 1.5 needs another plugin management concept
 
 
 Additional Resources
