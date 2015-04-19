@@ -32,4 +32,5 @@ defaults:
     - name: saltstack_config
     - name: saltstack_services
 nodes:
-  client1: {}
+  client1:
+    ip: 10.10.12.100
