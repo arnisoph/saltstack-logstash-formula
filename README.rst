@@ -2,14 +2,22 @@
 saltstack-logstash-formula
 ==========================
 
-.. image:: http://img.shields.io/github/tag/bechtoldt/saltstack-logstash-formula.svg
-    :target: https://github.com/bechtoldt/saltstack-logstash-formula/tags
 
-.. image:: http://issuestats.com/github/bechtoldt/saltstack-logstash-formula/badge/issue
-    :target: http://issuestats.com/github/bechtoldt/saltstack-logstash-formula
+.. image:: https://img.shields.io/badge/flattr-donate-red.svg
+    :alt: Donate via flattr
+    :target: https://flattr.com/profile/bechtoldt
 
-.. image:: https://api.flattr.com/button/flattr-badge-large.png
-    :target: https://flattr.com/submit/auto?user_id=bechtoldt&url=https%3A%2F%2Fgithub.com%2Fbechtoldt%2Fsaltstack-logstash-formula
+.. image:: https://img.shields.io/gratipay/bechtoldt.svg
+    :alt: Donate via Gratipay
+    :target: https://www.gratipay.com/bechtoldt/
+
+.. image:: https://img.shields.io/badge/license-Apache--2.0-blue.svg
+    :alt: Apache-2.0-licensed
+    :target: https://github.com/bechtoldt/saltstack-logstash-formula/blob/master/LICENSE
+
+.. image:: https://img.shields.io/badge/gitter-chat-brightgreen.svg
+    :alt: Join Chat
+    :target: https://gitter.im/bechtoldt/saltstack-logstash-formula?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 SaltStack formula to set up and configure Logstash, a tool for receiving, processing and outputting data
 
@@ -17,35 +25,20 @@ SaltStack formula to set up and configure Logstash, a tool for receiving, proces
     :backlinks: none
     :local:
 
+
 Instructions
 ------------
 
 Please refer to https://github.com/bechtoldt/formula-docs to learn how to use
 this formula, how it is built and how you can add your changes.
 
-**NOTICE:** This formula uses the formhelper module which is a very useful Salt execution module that isn't available
-in upstream yet. Please consider retrieving it manually from https://github.com/bechtoldt/salt-modules and
-make it available to your Salt installation. Read `SaltStack documentation <http://docs.saltstack.com/en/latest/ref/modules/#modules-are-easy-to-write>`_ to
-see how this can be achieved.
 
-Take a look at older `releases <https://github.com/bechtoldt/saltstack-logstash-formula/releases>`_ to get a version that isn't using the formhelper
-yet (if any).
+**NOTICE:** This formula might uses the formhelper module which is a very useful Salt execution module that isn't available in upstream yet. Please consider retrieving it manually from https://github.com/bechtoldt/salt-modules and make it available to your Salt installation. Read `SaltStack documentation <http://docs.saltstack.com/en/latest/ref/modules/#modules-are-easy-to-write>`_ to see how this can be achieved.
 
-**NOTICE:** Plugin management doesn't work when using Logtash with upstream's Debian package. They set a custom version in
-`lib/logstash/version.rb <https://github.com/elastic/logstash/blob/master/lib/logstash/version.rb>`_ that makes the plugin tool unable to download
-the contrib plugin. Custom plugin management is not supported yet.
+Take a look at older releases (branches) to get a version that isn't using the formhelper yet (if any).
 
+**NOTICE:** Plugin management doesn't work when using Logtash with upstream's Debian package. They set a custom version in `lib/logstash/version.rb <https://github.com/elastic/logstash/blob/master/lib/logstash/version.rb>`_ that makes the plugin tool unable to download the contrib plugin. Custom plugin management is not supported yet.
 
-Compatibility
--------------
-
-See <TODO> file to see which Salt versions and operating systems are supported.
-
-
-Dependencies
-------------
-
-None
 
 
 Contributing
@@ -63,22 +56,27 @@ In general:
 But it’s better to `file an issue <https://github.com/bechtoldt/saltstack-logstash-formula/issues/new>`_ with your idea first.
 
 
+Authors
+-------
+
+* Arnold Bechtoldt <mail@arnoldbechtoldt.com>
+
+
 TODO
 ----
 
-* add instructions how to use formhelper, add information about it in the
-  formula-docs (dependency), show up alternative?
+* add instructions how to use formhelper, add information about it in the formula-docs (dependency), show up alternative?
 * table/ matrix: os/salt compatibility (dedicated file)
 * add list of available states
 * add tests
-* support tarball-based deployment (that won't insteall distro's java)
-* create a serializer that supports deserializing yaml/json => logstash config
+* support tarball-based deployment (that won't install distro's java)
+* create a serializer that supports deserializing yaml/json: logstash config
 * extend logstash access permissions so the logstash is able to read root/adm-chgrp'ed files like /var/log/syslog
 * logstash 1.5 needs another plugin management concept
 
 
-Additional Resources
---------------------
+Miscellaneous
+-------------
 
 Recommended formulas:
 

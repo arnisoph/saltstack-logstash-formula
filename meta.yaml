@@ -1,0 +1,36 @@
+name: saltstack-logstash-formula
+source: https://github.com/bechtoldt/saltstack-logstash-formula
+summary: SaltStack formula to set up and configure Logstash, a tool for receiving, processing and outputting data
+todo:
+  - add instructions how to use formhelper, add information about it in the formula-docs (dependency), show up alternative?
+  - 'table/ matrix: os/salt compatibility (dedicated file)'
+  - add list of available states
+  - add tests
+  - "support tarball-based deployment (that won't install distro's java)"
+  - 'create a serializer that supports deserializing yaml/json: logstash config'
+  - "extend logstash access permissions so the logstash is able to read root/adm-chgrp'ed files like /var/log/syslog"
+  - logstash 1.5 needs another plugin management concept
+extra:
+  recommended_formulas:
+    - descr: Elasticsearch management
+      name: saltstack-elasticsearch-formula
+      url: https://github.com/bechtoldt/saltstack-elasticsearch-formula
+    - descr: Kibana user interface management
+      name: saltstack-kibana-formula
+      url: https://github.com/bechtoldt/saltstack-kibana-formula
+    - descr: Java deployment
+      name: saltstack-java-formula
+      url: https://github.com/bechtoldt/saltstack-java-formula
+    - descr: sysctl configuration
+      name: saltstack-sysctl-formula
+      url: https://github.com/bechtoldt/saltstack-sysctl-formula
+    - descr: repo management
+      name: saltstack-repos-formula
+      url: https://github.com/bechtoldt/saltstack-repos-formula
+  notice:
+    - |
+      This formula might uses the formhelper module which is a very useful Salt execution module that isn't available in upstream yet. Please consider retrieving it manually from https://github.com/bechtoldt/salt-modules and make it available to your Salt installation. Read `SaltStack documentation <http://docs.saltstack.com/en/latest/ref/modules/#modules-are-easy-to-write>`_ to see how this can be achieved.
+
+      Take a look at older releases (branches) to get a version that isn't using the formhelper yet (if any).
+    - |
+      Plugin management doesn't work when using Logtash with upstream's Debian package. They set a custom version in `lib/logstash/version.rb <https://github.com/elastic/logstash/blob/master/lib/logstash/version.rb>`_ that makes the plugin tool unable to download the contrib plugin. Custom plugin management is not supported yet.
