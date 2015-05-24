@@ -56,12 +56,6 @@ In general:
 But it’s better to `file an issue <https://github.com/bechtoldt/saltstack-logstash-formula/issues/new>`_ with your idea first.
 
 
-Authors
--------
-
-* Arnold Bechtoldt <mail@arnoldbechtoldt.com>
-
-
 TODO
 ----
 
@@ -73,6 +67,12 @@ TODO
 * create a serializer that supports deserializing yaml/json: logstash config
 * extend logstash access permissions so the logstash is able to read root/adm-chgrp'ed files like /var/log/syslog
 * logstash 1.5 needs another plugin management concept
+
+
+Authors
+-------
+
+* Arnold Bechtoldt <mail@arnoldbechtoldt.com>
 
 
 Miscellaneous
