@@ -12,6 +12,7 @@
   'LS_CONF_DIR': '/etc/logstash/conf.d',
   'LS_OPEN_FILES': '16384',
   'LS_NICE': '19'
+  'KILL_ON_STOP_TIMEOUT': '0',
   }
 -%}
 {%- set _defaults = datamap.defaults|default(_default_settings) -%}
